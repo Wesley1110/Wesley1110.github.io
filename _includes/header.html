@@ -1,0 +1,11 @@
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <nav class="nav">
+      {% for item in site.nav %}
+      <a href="{{ item.url | relative_url }}" class="nav-link {% if page.url == item.url %}active{% endif %}">{{ item.label }}</a>
+      {% endfor %}
+    </nav>
+    <button id="theme-toggle" aria-label="Toggle theme">☾</button>
+  </div>
+</header>

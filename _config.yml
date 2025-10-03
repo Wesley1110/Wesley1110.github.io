@@ -1,0 +1,30 @@
+title: "Wesley Tzeng"
+description: "PhD Candidate in Finance — Research, Code, Teaching"
+url: "https://Wesley1110.github.io"
+baseurl: ""
+permalink: /:title/
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+timezone: Asia/Taipei
+
+# Navigation (edit labels/links here)
+nav:
+  - label: "Home"
+    url: "/"
+  - label: "Research"
+    url: "/pages/research.html"
+  - label: "Code"
+    url: "/pages/code.html"
+  - label: "Teaching"
+    url: "/pages/teaching.html"
+
+# Social / metadata
+author:
+  name: "Wesley Tzeng"
+  email: ""
+  twitter: ""
+  github: "Wesley1110"
+  google_scholar: ""
+  orcid: ""
