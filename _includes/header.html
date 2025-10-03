@@ -1,11 +1,18 @@
-<header class="site-header">
-  <div class="container">
-    <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-    <nav class="nav">
-      {% for item in site.nav %}
-      <a href="{{ item.url | relative_url }}" class="nav-link {% if page.url == item.url %}active{% endif %}">{{ item.label }}</a>
-      {% endfor %}
-    </nav>
-    <button id="theme-toggle" aria-label="Toggle theme">☾</button>
+<header class="header">
+  {% if page.photo != false %}
+  <img class="photo" src="{{ '/assets/profile.jpg' | relative_url }}" alt="{{ site.author.name }}">
+  {% endif %}
+  <div class="name">{{ site.author.name }}</div>
+  <div class="sub">{{ site.description }}</div>
+  <nav class="nav">
+    {% for item in site.nav %}
+      <a href="{{ item.url | relative_url }}">{{ item.label }}</a>
+    {% endfor %}
+  </nav>
+  <div class="top-links">
+    {% if site.author.email %}<a href="mailto:{{ site.author.email }}">Email</a>{% endif %}
+    <a href="{{ site.author.scholar }}" target="_blank" rel="noopener">Google Scholar</a>
+    <a href="{{ site.author.github }}" target="_blank" rel="noopener">GitHub</a>
+    <a href="{{ site.author.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
   </div>
 </header>

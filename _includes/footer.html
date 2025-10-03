@@ -1,25 +1,3 @@
-<footer class="site-footer">
-  <div class="container small">
-    <div>&copy; {{ "now" | date: "%Y" }} {{ site.author.name }}. All rights reserved.</div>
-    <div class="muted">Built with <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> · <a href="https://jekyllrb.com/" target="_blank" rel="noopener">Jekyll</a>.</div>
-  </div>
+<footer class="footer">
+  © {{ "now" | date: "%Y" }} {{ site.author.name }}
 </footer>
-<script>
-// Theme toggle (light/dark)
-(function() {
-  const btn = document.getElementById('theme-toggle');
-  const key = 'wesley-theme';
-  function apply(theme) {
-    document.documentElement.setAttribute('data-theme', theme);
-  }
-  const saved = localStorage.getItem(key) || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-  apply(saved);
-  if (btn) {
-    btn.addEventListener('click', () => {
-      const next = (document.documentElement.getAttribute('data-theme') === 'dark') ? 'light' : 'dark';
-      apply(next);
-      localStorage.setItem(key, next);
-    });
-  }
-})();
-</script>

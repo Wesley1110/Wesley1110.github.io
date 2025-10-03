@@ -1,39 +1,17 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Home · Wesley Tzeng</title>
-  <link rel="stylesheet" href="assets/main.css">
-</head>
-<body>
-  <div class="container">
-    <header class="header">
-      <img class="photo" src="assets/profile.jpg" alt="Wesley Tzeng">
-      <div class="name">Wesley Tzeng</div>
-      <nav class="nav"><a href="index.html">Home</a><a href="research.html">Research</a><a href="code.html">Code</a><a href="teaching.html">Teaching</a><a href="cv.pdf">CV</a></nav>
-      <div class="top-links">
-        <a href="mailto:">Email</a>
-        <a href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a>
-        <a href="https://github.com/Wesley1110" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
-    </header>
-    <section>
-  <p class="small">I am a PhD Candidate in Finance at NCCU (Taiwan). My research spans asset pricing, factor‑mimicking portfolios, ambiguity/uncertainty indices, and machine‑learning methods for empirical finance. I also teach computational finance.</p>
-  <p>In my research, I apply IPCA/SPCA and GMM testing to understand risk premia, build ambiguity indices for Japan and Taiwan, and study climate‑risk links to default probability. See my <a href="research.html">Research</a> for details.</p>
-</section>
+---
+layout: default
+title: Home
+---
+
+<p class="small">
+I am a PhD Candidate in Finance at NCCU (Taiwan). My research spans asset pricing, factor‑mimicking portfolios,
+ambiguity/uncertainty indices, and machine‑learning methods for empirical finance. I also teach computational finance.
+</p>
 
 <hr>
 
-<section>
-  <h2>News</h2>
-  <ul>
-    <li><strong>Oct 2025:</strong> Launched my academic website.</li>
-    <li><strong>2025:</strong> Draft on NLP‑driven credit risk prediction using BERT domain adaptation.</li>
-  </ul>
-</section>
-    <footer class="footer">© Home 2025</footer>
-  </div>
-</body>
-</html>
+<h2>News</h2>
+<ul>
+  <li><strong>{{ "now" | date: "%b %Y" }}:</strong> Launched my academic website.</li>
+  <li><strong>2025:</strong> Draft on NLP‑driven credit risk prediction using BERT domain adaptation.</li>
+</ul>

@@ -1,15 +1,11 @@
 title: "Wesley Tzeng"
-description: "PhD Candidate in Finance — Research, Code, Teaching"
+description: "PhD Candidate in Finance"
 url: "https://Wesley1110.github.io"
 baseurl: ""
-permalink: /:title/
 markdown: kramdown
-kramdown:
-  input: GFM
-  hard_wrap: false
+permalink: pretty
 timezone: Asia/Taipei
 
-# Navigation (edit labels/links here)
 nav:
   - label: "Home"
     url: "/"
@@ -19,12 +15,12 @@ nav:
     url: "/pages/code.html"
   - label: "Teaching"
     url: "/pages/teaching.html"
+  - label: "CV"
+    url: "/cv.pdf"
 
-# Social / metadata
 author:
   name: "Wesley Tzeng"
   email: ""
-  twitter: ""
-  github: "Wesley1110"
-  google_scholar: ""
-  orcid: ""
+  scholar: "https://scholar.google.com"
+  github: "https://github.com/Wesley1110"
+  linkedin: "https://www.linkedin.com/"
