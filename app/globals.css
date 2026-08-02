@@ -313,6 +313,12 @@ h3 {
   letter-spacing: -0.035em;
 }
 
+.section-heading h2 {
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+}
+
 .prose-stack p {
   margin: 0;
   color: var(--ink-soft);
@@ -657,6 +663,15 @@ h3 {
     grid-column: 2;
     width: min(860px, calc(100% - 80px));
     margin: 0 auto;
+  }
+
+  .research-section {
+    grid-template-columns: minmax(220px, 0.38fr) minmax(0, 1fr);
+    gap: clamp(32px, 4.5vw, 56px);
+  }
+
+  .section-heading h2 {
+    font-size: clamp(2rem, 2.8vw, 2.75rem);
   }
 
   .hero {

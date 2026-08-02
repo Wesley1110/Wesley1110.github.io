@@ -4,7 +4,7 @@ import { SiteShell } from "../components/SiteShell";
 export const metadata: Metadata = {
   title: "Research",
   description:
-    "Research topics and publication by Wesley Tzeng in asset pricing, uncertainty, monetary policy, news salience, and exchange rates.",
+    "Empirical asset pricing research by Wesley Tzeng using factor-mimicking portfolios, GMM, machine learning, and time-series predictive methods.",
 };
 
 const workingTopics = [
@@ -45,9 +45,12 @@ export default function ResearchPage() {
         <p className="eyebrow">Research</p>
         <h1>Questions before titles.</h1>
         <p>
-          My research focuses on the information frictions behind prices: what
-          investors notice, how uncertainty is formed, and when those signals
-          become useful for prediction.
+          My research is in empirical asset pricing, with a focus on how
+          information, uncertainty, and macro-financial conditions shape
+          expected returns and predictability across equity and foreign-exchange
+          markets. My empirical toolkit includes factor-mimicking portfolios,
+          generalized method of moments (GMM), machine learning, and time-series
+          predictive methods.
         </p>
       </header>
 
