@@ -58,5 +58,19 @@ test("server-renders teaching resources", async () => {
   assert.match(html, /Consistency, mean-square convergence/);
   assert.match(html, /Barone-Adesi and Whaley \(1987\)/);
   assert.match(html, /class="course-list"/);
+  assert.match(html, /不要以為做 DID 就可以解決內生性問題/);
+  assert.match(html, /\/teaching\/did-and-endogeneity/);
   assert.match(html, /teaching-consistency-mse\.pdf/);
+});
+
+test("server-renders the DID and endogeneity teaching article", async () => {
+  const response = await render("/teaching/did-and-endogeneity");
+  const html = await response.text();
+
+  assert.equal(response.status, 200);
+  assert.match(html, /不要以為做 DID 就可以解決內生性問題/);
+  assert.match(html, /DID 是策略，不是萬靈丹/);
+  assert.match(html, /Craigslist/);
+  assert.match(html, /valid instrument/i);
+  assert.match(html, /10\.1016\/j\.jfineco\.2021\.08\.015/);
 });

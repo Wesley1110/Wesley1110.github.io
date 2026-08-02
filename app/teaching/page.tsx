@@ -32,6 +32,15 @@ const notes = [
     href: "/teaching-black-scholes-pde.pdf",
     meta: "4 pages · Chinese",
   },
+  {
+    area: "Corporate Finance · Causal Inference",
+    title: "不要以為做 DID 就可以解決內生性問題",
+    description:
+      "A Chinese-language empirical note on what difference-in-differences identifies, where endogeneity can remain, and how a credible instrumental variable may provide complementary evidence.",
+    href: "/teaching/did-and-endogeneity",
+    meta: "Web article · Chinese",
+    linkLabel: "Read article",
+  },
 ];
 
 export default function TeachingPage() {
@@ -62,8 +71,12 @@ export default function TeachingPage() {
                 <p>{note.description}</p>
                 <div className="note-meta">
                   <span>{note.meta}</span>
-                  <a href={note.href} target="_blank" rel="noreferrer">
-                    Read PDF <span aria-hidden="true">↗</span>
+                  <a
+                    href={note.href}
+                    target={note.linkLabel ? undefined : "_blank"}
+                    rel={note.linkLabel ? undefined : "noreferrer"}
+                  >
+                    {note.linkLabel ?? "Read PDF"} <span aria-hidden="true">↗</span>
                   </a>
                 </div>
               </div>

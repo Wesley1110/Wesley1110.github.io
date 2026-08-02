@@ -26,7 +26,7 @@ await cp(
 );
 await writeFile(path.join(outputRoot, ".nojekyll"), "", "utf8");
 
-const routes = ["/", "/research", "/teaching"];
+const routes = ["/", "/research", "/teaching", "/teaching/did-and-endogeneity"];
 
 for (const route of routes) {
   const response = await worker.fetch(
