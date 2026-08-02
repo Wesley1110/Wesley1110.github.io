@@ -33,7 +33,7 @@ export async function generateMetadata(): Promise<Metadata> {
       type: "website",
       images: [
         {
-          url: new URL("/og.png", metadataBase),
+          url: new URL("/og-dark.png", metadataBase),
           width: 1536,
           height: 1024,
           alt: "Wesley Tzeng — Finance PhD Candidate",
@@ -45,7 +45,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title: "Wesley Tzeng · Finance PhD Candidate",
       description:
         "Research in asset pricing, macro-finance, behavioral finance, and machine learning.",
-      images: [new URL("/og.png", metadataBase)],
+      images: [new URL("/og-dark.png", metadataBase)],
     },
   };
 }

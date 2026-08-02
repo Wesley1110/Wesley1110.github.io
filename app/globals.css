@@ -1,14 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --paper: #f4f0e8;
-  --paper-deep: #e8e0d3;
-  --ink: #112a45;
-  --ink-soft: #35485a;
-  --muted: #69727a;
-  --accent: #b64a36;
-  --line: rgba(17, 42, 69, 0.2);
-  --white: #fffdf8;
+  --paper: #ffffff;
+  --paper-deep: #f0f0f0;
+  --ink: #2c2c2c;
+  --ink-soft: #515151;
+  --muted: #737373;
+  --accent: #3498db;
+  --line: rgba(0, 0, 0, 0.14);
+  --white: #ffffff;
+  --sidebar: #202020;
 }
 
 * {
@@ -22,9 +23,7 @@ html {
 
 body {
   margin: 0;
-  background:
-    radial-gradient(circle at 82% 6%, rgba(182, 74, 54, 0.06), transparent 24rem),
-    var(--paper);
+  background: var(--paper);
   color: var(--ink);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 17px;
@@ -51,7 +50,7 @@ a {
   position: relative;
   z-index: 10;
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-  background: var(--ink);
+  background: var(--sidebar);
   color: var(--white);
 }
 
@@ -189,16 +188,16 @@ h1,
 h2,
 h3 {
   margin-top: 0;
-  font-family: Georgia, "Times New Roman", serif;
-  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
   line-height: 1.13;
 }
 
 .hero h1,
 .page-intro h1 {
   margin-bottom: 28px;
-  font-size: clamp(3.1rem, 7.1vw, 6.4rem);
-  letter-spacing: -0.055em;
+  font-size: clamp(3rem, 6vw, 5.25rem);
+  letter-spacing: -0.045em;
 }
 
 .hero-lede,
@@ -206,7 +205,7 @@ h3 {
   max-width: 680px;
   margin: 0;
   color: var(--ink-soft);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: clamp(1.18rem, 2vw, 1.42rem);
   line-height: 1.56;
 }
@@ -261,28 +260,22 @@ h3 {
 }
 
 .portrait-frame::before {
-  position: absolute;
-  z-index: 1;
-  top: -18px;
-  right: -18px;
-  width: 78px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: var(--accent);
-  content: "";
+  content: none;
 }
 
 .portrait-frame img {
   position: relative;
   z-index: 2;
   width: 100%;
-  aspect-ratio: 4 / 5;
+  height: auto;
   display: block;
-  border: 10px solid var(--white);
-  object-fit: cover;
-  object-position: 50% 56%;
-  filter: saturate(0.8) contrast(1.04);
-  box-shadow: 0 26px 70px rgba(17, 42, 69, 0.16);
+  border: 0;
+  border-radius: 3px;
+  background: #000;
+  object-fit: contain;
+  object-position: center;
+  filter: grayscale(0.25) contrast(1.04);
+  box-shadow: none;
 }
 
 .portrait-frame figcaption {
@@ -292,7 +285,7 @@ h3 {
   color: var(--muted);
   font-size: 0.74rem;
   letter-spacing: 0.08em;
-  text-align: right;
+  text-align: left;
   text-transform: uppercase;
 }
 
@@ -323,7 +316,7 @@ h3 {
 .prose-stack p {
   margin: 0;
   color: var(--ink-soft);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 1.08rem;
 }
 
@@ -344,7 +337,7 @@ h3 {
   padding: 20px 22px;
   border: 1px solid var(--line);
   background: rgba(255, 253, 248, 0.46);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 1.08rem;
 }
 
@@ -412,7 +405,7 @@ h3 {
   padding: 42px;
   border: 1px solid var(--line);
   background: var(--white);
-  box-shadow: 12px 12px 0 var(--paper-deep);
+  box-shadow: none;
 }
 
 .publication-card h3 {
@@ -522,7 +515,7 @@ h3 {
 .baw-card > p {
   margin-top: 0;
   color: var(--ink-soft);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 1.08rem;
 }
 
@@ -539,7 +532,7 @@ h3 {
 .site-footer {
   margin-top: 40px;
   padding: 58px 0;
-  background: var(--ink);
+  background: var(--sidebar);
   color: var(--white);
 }
 
@@ -583,7 +576,115 @@ h3 {
   border-top: 1px solid rgba(255, 255, 255, 0.14);
 }
 
-@media (max-width: 800px) {
+@media (min-width: 901px) {
+  .site-shell {
+    display: grid;
+    grid-template-columns: 320px minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .site-header {
+    position: sticky;
+    top: 0;
+    grid-column: 1;
+    grid-row: 1 / 3;
+    height: 100vh;
+    border: 0;
+  }
+
+  .header-inner {
+    width: 100%;
+    min-height: 0;
+    height: 100%;
+    margin: 0;
+    padding: 42px 34px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0;
+  }
+
+  .brand {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 19px;
+  }
+
+  .brand-mark {
+    width: 74px;
+    border-color: rgba(255, 255, 255, 0.35);
+  }
+
+  .brand strong {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.85rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+  }
+
+  .brand small {
+    max-width: 220px;
+    margin-top: 7px;
+    line-height: 1.55;
+  }
+
+  .site-header nav {
+    width: 100%;
+    margin-top: 38px;
+  }
+
+  .nav-list {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .nav-list a {
+    padding: 5px 0;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 1rem;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
+  .nav-list a::after {
+    height: 1px;
+    background: var(--accent);
+  }
+
+  .page-wrap {
+    grid-column: 2;
+    width: min(860px, calc(100% - 80px));
+    margin: 0 auto;
+  }
+
+  .hero {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    gap: 54px;
+    padding: 80px 0 84px;
+  }
+
+  .hero-copy {
+    max-width: 790px;
+  }
+
+  .portrait-frame {
+    max-width: 760px;
+  }
+
+  .site-footer {
+    grid-column: 2;
+    margin-top: 40px;
+  }
+
+  .footer-grid {
+    width: min(860px, calc(100% - 80px));
+  }
+}
+
+@media (max-width: 900px) {
   .header-inner {
     min-height: auto;
     padding: 24px 0;
@@ -612,7 +713,8 @@ h3 {
   }
 
   .portrait-frame img {
-    aspect-ratio: 16 / 10;
+    height: auto;
+    object-fit: contain;
   }
 
   .editorial-grid,

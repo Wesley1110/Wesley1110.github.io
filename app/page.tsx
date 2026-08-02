@@ -45,6 +45,7 @@ export default function Home() {
             width={2048}
             height={1152}
             priority
+            unoptimized
             sizes="(max-width: 760px) 100vw, 38vw"
           />
           <figcaption>Curiosity begins at the blackboard.</figcaption>
