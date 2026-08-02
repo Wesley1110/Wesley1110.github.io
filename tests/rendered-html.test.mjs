@@ -57,5 +57,6 @@ test("server-renders teaching resources", async () => {
   assert.equal(response.status, 200);
   assert.match(html, /Consistency, mean-square convergence/);
   assert.match(html, /Barone-Adesi and Whaley \(1987\)/);
+  assert.match(html, /class="course-list"/);
   assert.match(html, /teaching-consistency-mse\.pdf/);
 });

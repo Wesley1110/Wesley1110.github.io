@@ -120,7 +120,10 @@ export default function TeachingPage() {
         </div>
         <div>
           <h3>Teaching Assistant · National Chengchi University</h3>
-          <p>Option Valuation and Applications · Advanced Quantitative Methods</p>
+          <ul className="course-list" aria-label="Courses">
+            <li>Option Valuation and Applications</li>
+            <li>Advanced Quantitative Methods</li>
+          </ul>
         </div>
       </section>
     </SiteShell>

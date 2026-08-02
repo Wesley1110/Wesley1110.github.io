@@ -394,6 +394,15 @@ h3 {
   color: var(--ink-soft);
 }
 
+.course-list {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  color: var(--ink-soft);
+  list-style: none;
+}
+
 .page-intro {
   max-width: 960px;
   padding: 112px 0 104px;
