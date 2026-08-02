@@ -69,7 +69,7 @@ test("server-renders the DID and endogeneity teaching article", async () => {
 
   assert.equal(response.status, 200);
   assert.match(html, /不要以為做 DID 就可以解決內生性問題/);
-  assert.match(html, /DID 是策略，不是萬靈丹/);
+  assert.match(html, /DID 是 identification strategy，不是萬靈丹/);
   assert.match(html, /Craigslist/);
   assert.match(html, /valid instrument/i);
   assert.match(html, /10\.1016\/j\.jfineco\.2021\.08\.015/);
