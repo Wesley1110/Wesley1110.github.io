@@ -42,6 +42,8 @@ test("server-renders research topics without manuscript titles", async () => {
 
   assert.equal(response.status, 200);
   assert.match(html, /Working paper topics/);
+  assert.match(html, /papers\.ssrn\.com\/sol3\/cf_dev\/AbsByAuth\.cfm\?per_id=6262633/);
+  assert.match(html, /github\.com\/Wesley1110/);
   assert.match(html, /Adverse-news salience in foreign-exchange markets/);
   assert.match(html, /With Mi-Hsiu Chiang/);
   assert.doesNotMatch(html, /The Multifaceted Economic Policy Uncertainty Effects on Asset Prices/);

@@ -44,7 +44,7 @@ export default function ResearchPage() {
       <header className="page-intro">
         <p className="eyebrow">Research</p>
         <h1>Questions before titles.</h1>
-        <p>
+        <p className="page-intro-copy">
           My research is in empirical asset pricing, with a focus on how
           information, uncertainty, and macro-financial conditions shape
           expected returns and predictability across equity and foreign-exchange
@@ -52,6 +52,24 @@ export default function ResearchPage() {
           generalized method of moments (GMM), machine learning, and time-series
           predictive methods.
         </p>
+        <nav className="button-row research-profile-links" aria-label="Research profiles">
+          <a
+            className="button button-primary"
+            href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=6262633"
+            target="_blank"
+            rel="noreferrer"
+          >
+            SSRN Profile
+          </a>
+          <a
+            className="button button-secondary"
+            href="https://github.com/Wesley1110"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+        </nav>
       </header>
 
       <section className="research-section section-rule" aria-labelledby="publication-title">
