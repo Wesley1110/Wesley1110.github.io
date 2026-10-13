@@ -13,7 +13,8 @@ const interests = [
   "Empirical Asset Pricing",
   "Macro-Finance",
   "Behavioral Finance",
-  "Machine Learning",
+  "Machine Learning and AI in Finance",
+  "Theoretical Asset Pricing and Portfolio Choice",
 ];
 
 export default function Home() {
