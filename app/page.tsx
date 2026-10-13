@@ -24,9 +24,12 @@ export default function Home() {
           <p className="eyebrow">Finance · Asset Pricing · Econometrics</p>
           <h1 id="home-title">Researching how information becomes price.</h1>
           <p className="hero-lede">
-            I am a PhD candidate in Finance at National Chengchi University,
-            studying how uncertainty, news, and investor beliefs shape asset
-            prices and exchange rates.
+            I am a PhD candidate in Finance at National Chengchi University.
+            My research examines how information, uncertainty, and investor
+            beliefs shape asset prices and investment decisions. I combine
+            empirical analysis with theoretical modeling, with interests
+            spanning asset pricing, macro-finance, behavioral finance, and
+            artificial intelligence.
           </p>
           <div className="button-row" aria-label="Profile links">
             <a className="button button-primary" href="/cv-wesley-tzeng.pdf">
@@ -59,10 +62,18 @@ export default function Home() {
         </div>
         <div className="prose-stack">
           <p>
-            My work sits at the intersection of empirical asset pricing,
-            macro-finance, behavioral finance, and modern textual analysis. I
-            am especially interested in settings where attention and
-            uncertainty change the information investors extract from markets.
+            My empirical work studies policy uncertainty, central-bank
+            communication, ambiguity, and exchange-rate predictability. I
+            combine financial data with text and audio analysis to examine
+            how investors interpret information and how that information
+            enters market prices.
+          </p>
+          <p>
+            Alongside my empirical work, I develop theoretical models of
+            investor beliefs, delegated portfolio management, and AI in
+            financial markets. These projects examine how information-processing
+            capabilities, preferences, and institutional constraints shape
+            stock demand, portfolio choice, and equilibrium prices.
           </p>
           <p>
             I am currently a research assistant on a National Science and

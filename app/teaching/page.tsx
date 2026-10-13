@@ -49,11 +49,18 @@ export default function TeachingPage() {
       <header className="page-intro">
         <p className="eyebrow">Teaching</p>
         <h1>Derivations with an economic reason.</h1>
-        <p>
-          I write notes that make the mathematical step and the financial
-          intuition visible together. These materials support courses in option
-          valuation and advanced quantitative methods.
-        </p>
+        <div className="prose-stack">
+          <p>
+            My approach starts with the economic question, revisits the necessary
+            mathematical foundations, and works through the derivation step by
+            step. Where useful, Python simulations connect an analytical result
+            to a numerical example that students can explore themselves.
+          </p>
+          <p>
+            These materials support courses in option valuation and advanced
+            quantitative methods.
+          </p>
+        </div>
       </header>
 
       <section className="notes-grid section-rule" aria-labelledby="notes-title">

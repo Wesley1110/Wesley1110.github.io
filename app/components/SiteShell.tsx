@@ -69,7 +69,7 @@ export function SiteShell({
               GitHub
             </a>
           </div>
-          <p className="footer-meta">Taipei, Taiwan · Updated August 2026</p>
+          <p className="footer-meta">Taipei, Taiwan · Updated October 2026</p>
         </div>
       </footer>
     </div>
